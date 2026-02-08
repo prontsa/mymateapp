@@ -1,9 +1,9 @@
 
-const CACHE_NAME = 'timemate-v1';
+const CACHE_NAME = 'timemate-v2';
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.json',
+  './',
+  './index.html',
+  './manifest.json',
   'https://cdn.tailwindcss.com'
 ];
 

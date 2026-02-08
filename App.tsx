@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
-import { Widget, WidgetSize } from './types';
-import { INITIAL_WIDGETS } from './constants';
-import { getGreeting } from './services/geminiService';
-import WidgetComponent from './components/Widget';
-import WidgetEditor from './components/WidgetEditor';
+import { Widget, WidgetSize } from './types.ts';
+import { INITIAL_WIDGETS } from './constants.tsx';
+import { getGreeting } from './services/geminiService.ts';
+import WidgetComponent from './components/Widget.tsx';
+import WidgetEditor from './components/WidgetEditor.tsx';
 import { 
   Plus, Clock, Users, Layout, Globe, MapPin, Smartphone, 
   X, Download, Share2, ShieldCheck, Rocket, ExternalLink, 

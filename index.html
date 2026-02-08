@@ -28,7 +28,6 @@
         color: #f8fafc;
         margin: 0;
         overflow-x: hidden;
-        /* Prevent bounce effects on mobile scroll */
         overscroll-behavior-y: contain;
         -webkit-tap-highlight-color: transparent;
       }
@@ -48,7 +47,6 @@
       .phone-frame {
         box-shadow: 0 0 0 12px #1e293b, 0 0 0 15px #334155, 0 30px 60px rgba(0,0,0,0.5);
       }
-      /* Custom no-scrollbar utility */
       .no-scrollbar::-webkit-scrollbar {
         display: none;
       }
@@ -56,12 +54,9 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
       }
-      
-      /* Safe areas for notched phones */
       .pt-safe { padding-top: env(safe-area-inset-top); }
       .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
 
-      /* Native Splash Screen Animation */
       #splash {
         position: fixed;
         inset: 0;
@@ -96,6 +91,10 @@
       <h1 style="color: white; font-weight: 900; letter-spacing: -0.05em; font-size: 24px;">TimeMate</h1>
     </div>
     <div id="root"></div>
+    
+    <!-- Entry point -->
+    <script type="module" src="index.tsx"></script>
+
     <script>
       // Remove splash once React is ready
       window.addEventListener('load', () => {
@@ -108,10 +107,10 @@
         }
       });
 
-      // Register Service Worker
+      // Register Service Worker using relative path for GitHub Pages compatibility
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js').catch(err => {
+          navigator.serviceWorker.register('sw.js').catch(err => {
             console.log('SW registration failed: ', err);
           });
         });

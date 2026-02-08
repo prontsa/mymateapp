@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Widget as WidgetType, WidgetSize, ClockFont } from '../types';
+import { Widget as WidgetType, WidgetSize, ClockFont } from '../types.ts';
 import { Trash2, Heart, Settings, GripVertical } from 'lucide-react';
 import { motion } from 'framer-motion';
 

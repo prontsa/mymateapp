@@ -1,8 +1,8 @@
 
 import React, { useState, useRef } from 'react';
-import { Widget, WidgetSize, ClockFont, WidgetStyle } from '../types';
-import { THEME_PRESETS } from '../constants';
-import { findLocationData } from '../services/geminiService';
+import { Widget, WidgetSize, ClockFont, WidgetStyle } from '../types.ts';
+import { THEME_PRESETS } from '../constants.tsx';
+import { findLocationData } from '../services/geminiService.ts';
 import { Search, Loader2, X, Check, Image as ImageIcon, Upload, Move } from 'lucide-react';
 
 interface WidgetEditorProps {

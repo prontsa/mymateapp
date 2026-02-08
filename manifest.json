@@ -3,7 +3,7 @@
   "name": "TimeMate - World Clock & Widgets",
   "short_name": "TimeMate",
   "id": "com.timemate.app",
-  "start_url": "./index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "background_color": "#020617",
@@ -35,7 +35,7 @@
     {
       "name": "New Widget",
       "short_name": "New",
-      "url": "/?action=new",
+      "url": "index.html?action=new",
       "icons": [{ "src": "https://cdn-icons-png.flaticon.com/512/2088/2088617.png", "sizes": "192x192" }]
     }
   ],
