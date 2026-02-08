@@ -1,0 +1,23 @@
+
+{
+  "name": "TimeMate - World Clock & Widgets",
+  "short_name": "TimeMate",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#4f46e5",
+  "description": "Customizable world clock widgets for your home screen.",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2088/2088617.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2088/2088617.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
