@@ -1,4 +1,3 @@
-
 {
   "name": "TimeMate",
   "short_name": "TimeMate",
@@ -14,10 +13,16 @@
   ],
   "android": {
     "package_name": "com.timemate.app",
-    "permissions": ["INTERNET", "ACCESS_FINE_LOCATION"]
+    "permissions": [
+      "INTERNET",
+      "ACCESS_FINE_LOCATION"
+    ]
   },
   "ios": {
     "bundle_id": "com.timemate.app",
-    "capabilities": ["Location", "Background Fetch"]
+    "capabilities": [
+      "Location",
+      "Background Fetch"
+    ]
   }
 }

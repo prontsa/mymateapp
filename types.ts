@@ -18,6 +18,9 @@ export interface WidgetStyle {
   borderWidth: number;
   backgroundImage?: string; // Base64 or URL
   imageOpacity?: number;
+  bgPosX?: number; // 0 to 100
+  bgPosY?: number; // 0 to 100
+  bgScale?: number; // 100 to 300
 }
 
 export interface Widget {
