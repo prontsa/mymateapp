@@ -1,9 +1,19 @@
 
 import { GoogleGenAI, Type } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const getAIClient = () => {
+  const apiKey = process.env.API_KEY;
+  if (!apiKey) return null;
+  return new GoogleGenAI({ apiKey });
+};
 
 export async function findLocationData(query: string) {
+  const ai = getAIClient();
+  if (!ai) {
+    console.error("API Key not found. Please check your environment variables.");
+    return null;
+  }
+  
   try {
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
@@ -30,6 +40,9 @@ export async function findLocationData(query: string) {
 }
 
 export async function getGreeting(timeOfDay: string) {
+  const ai = getAIClient();
+  if (!ai) return 'Hello!';
+
   try {
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",

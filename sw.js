@@ -1,16 +1,23 @@
 
-const CACHE_NAME = 'timemate-v2';
+const CACHE_NAME = 'timemate-v3';
 const ASSETS = [
   './',
   './index.html',
   './manifest.json',
+  './index.tsx',
+  './App.tsx',
+  './types.ts',
+  './constants.tsx',
   'https://cdn.tailwindcss.com'
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(ASSETS);
+      // Use {cache: 'reload'} to ensure we get fresh files
+      return Promise.all(
+        ASSETS.map(url => cache.add(new Request(url, { cache: 'reload' })))
+      );
     })
   );
 });
@@ -18,7 +25,9 @@ self.addEventListener('install', (event) => {
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
+      return response || fetch(event.request).catch(() => {
+        // Optional: Return a fallback for offline
+      });
     })
   );
 });

@@ -1,5 +1,5 @@
 
-import { WidgetStyle, ClockFont } from './types';
+import { WidgetStyle, ClockFont } from './types.ts';
 
 export const THEME_PRESETS: { name: string; style: WidgetStyle }[] = [
   {
